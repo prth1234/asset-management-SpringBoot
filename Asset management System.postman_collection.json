@@ -1,0 +1,697 @@
+	{
+	"info": {
+		"_postman_id": "d1f18cfd-04cb-4154-8a2a-2d1e33bb398c",
+		"name": "Asset management System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32222541"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "Get all categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/categories"
+					},
+					"response": [
+						{
+							"name": "Get all categories",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/categories"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Jan 2024 11:54:48 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Laptops\",\n        \"description\": \"Portable devices used for computing\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Mobile Phones\",\n        \"description\": \"Handheld portable devices used for communication\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get all assets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/assets"
+					},
+					"response": [
+						{
+							"name": "Get all assets",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/assets"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Jan 2024 11:54:57 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Acer1\",\n        \"purchaseDate\": \"2024-01-09\",\n        \"conditionNotes\": \"New and Unused\",\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"Laptops\",\n            \"description\": \"Portable devices used for computing\"\n        },\n        \"assignmentStatus\": \"RECOVERED\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Samsung Galaxy S23\",\n        \"purchaseDate\": \"2024-01-09\",\n        \"conditionNotes\": \"New and Unused\",\n        \"category\": {\n            \"id\": 2,\n            \"name\": \"Mobile Phones\",\n            \"description\": \"Handheld portable devices used for communication\"\n        },\n        \"assignmentStatus\": \"AVAILABLE\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get category by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/categories/1"
+					},
+					"response": [
+						{
+							"name": "Get category by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/categories/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Jan 2024 11:55:04 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"Laptops\",\n    \"description\": \"Portable devices used for computing\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get asset by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/assets/id/1"
+					},
+					"response": [
+						{
+							"name": "Get asset by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/assets/id/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Jan 2024 11:55:10 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"Acer1\",\n    \"purchaseDate\": \"2024-01-09\",\n    \"conditionNotes\": \"New and Unused\",\n    \"category\": {\n        \"id\": 1,\n        \"name\": \"Laptops\",\n        \"description\": \"Portable devices used for computing\"\n    },\n    \"assignmentStatus\": \"RECOVERED\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "Post a category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Audio Devices\",\n    \"description\": \"Consists of speakers and other devices used for audio\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/categories"
+					},
+					"response": [
+						{
+							"name": "Post a category",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Audio Devices\",\n    \"description\": \"Consists of speakers and other devices used for audio\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/categories"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Jan 2024 11:57:18 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"name\": \"Audio Devices\",\n    \"description\": \"Consists of speakers and other devices used for audio\"\n}"
+						}
+					]
+				},
+				{
+					"name": "POST an asset",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Apple IPhone 15\",\n    \"purchaseDate\": \"2024-01-10\",\n    \"conditionNotes\": \"New and Unused\",\n    \"category\": {\n        \"id\": 2\n    },\n    \"assignmentStatus\": \"AVAILABLE\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/assets"
+					},
+					"response": [
+						{
+							"name": "POST an asset",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Apple IPhone 15\",\n    \"purchaseDate\": \"2024-01-10\",\n    \"conditionNotes\": \"New and Unused\",\n    \"category\": {\n        \"id\": 2\n    },\n    \"assignmentStatus\": \"AVAILABLE\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/assets"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Jan 2024 11:57:36 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"name\": \"Apple IPhone 15\",\n    \"purchaseDate\": \"2024-01-10\",\n    \"conditionNotes\": \"New and Unused\",\n    \"category\": {\n        \"id\": 2,\n        \"name\": null,\n        \"description\": null\n    },\n    \"assignmentStatus\": \"AVAILABLE\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "PUT",
+			"item": [
+				{
+					"name": "Put to modify a category",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Mobile Phones\",\n    \"description\": \"Handheld portable devices used for communication\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/categories/2"
+					},
+					"response": [
+						{
+							"name": "Put to modify a category",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Mobile Phones\",\n    \"description\": \"Handheld portable devices used for communication\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/categories/2"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Jan 2024 11:57:54 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"name\": \"Mobile Phones\",\n    \"description\": \"Handheld portable devices used for communication\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Put to modify an asset",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"name\": \"Acer1\",\n\"purchaseDate\": \"2024-01-09\",\n\"conditionNotes\": \"New and Unused\",\n\"category\": {\n\"id\": 1\n},\n\"assignmentStatus\": \"AVAILABLE\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/assets/1"
+					},
+					"response": [
+						{
+							"name": "Put to modify an asset",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"name\": \"Acer1\",\n\"purchaseDate\": \"2024-01-09\",\n\"conditionNotes\": \"New and Unused\",\n\"category\": {\n\"id\": 1\n},\n\"assignmentStatus\": \"AVAILABLE\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/assets/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Jan 2024 11:58:02 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"Acer1\",\n    \"purchaseDate\": \"2024-01-09\",\n    \"conditionNotes\": \"New and Unused\",\n    \"category\": {\n        \"id\": 1,\n        \"name\": null,\n        \"description\": null\n    },\n    \"assignmentStatus\": \"AVAILABLE\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Assign an asset",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/assets/1/assign?assignmentStatus=ASSIGNED",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"assets",
+								"1",
+								"assign"
+							],
+							"query": [
+								{
+									"key": "assignmentStatus",
+									"value": "ASSIGNED"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Assign an asset",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/assets/1/assign?assignmentStatus=ASSIGNED",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"assets",
+										"1",
+										"assign"
+									],
+									"query": [
+										{
+											"key": "assignmentStatus",
+											"value": "ASSIGNED"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 10 Jan 2024 11:58:13 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Recover an asset",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/assets/1/recover?assignmentStatus=RECOVERED",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"assets",
+								"1",
+								"recover"
+							],
+							"query": [
+								{
+									"key": "assignmentStatus",
+									"value": "RECOVERED"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Recover an asset",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/assets/1/recover?assignmentStatus=RECOVERED",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"assets",
+										"1",
+										"recover"
+									],
+									"query": [
+										{
+											"key": "assignmentStatus",
+											"value": "RECOVERED"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 10 Jan 2024 11:58:20 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "DELETE",
+			"item": [
+				{
+					"name": "Delete to delete a category",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/categories/3"
+					},
+					"response": [
+						{
+							"name": "Delete to delete a category",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:8080/api/categories/3"
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 10 Jan 2024 11:58:51 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Delete an asset",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/assets/4"
+					},
+					"response": [
+						{
+							"name": "Delete an asset",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:8080/api/assets/4"
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 10 Jan 2024 11:58:41 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		}
+	]
+}
